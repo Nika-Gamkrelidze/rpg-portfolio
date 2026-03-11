@@ -34,7 +34,7 @@ const WowTooltip: React.FC<WowTooltipProps> = ({ title, children, description, s
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
       onMouseMove={handleMouseMove}
-      className="inline-block"
+      className="inline-block w-full"
     >
       {children}
       {visible && (

@@ -45,7 +45,7 @@ export const characterInfo = {
   guild: "<Code Warriors>",
   avatars: {
     real: "/avatars/me.jpeg",
-    priest: "/avatars/proest.PNG",
+    priest: "/avatars/priest.png",
   },
   contact: {
     email: "your.email@example.com",

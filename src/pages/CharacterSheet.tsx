@@ -77,8 +77,9 @@ const CharacterSheet: React.FC = () => {
           </div>
         </div>
 
-        {/* Center - Avatar */}
-        <div className="flex flex-col items-center justify-start gap-3 w-full lg:w-64">
+        {/* Center - Avatar with horizontal resource bars */}
+        <div className="flex flex-col items-center justify-start gap-3 w-full lg:w-72">
+          {/* Avatar */}
           <div
             onClick={() => setShowPriest(!showPriest)}
             className="relative w-48 h-48 border-2 border-primary rounded-sm bg-card/30 flex items-center justify-center overflow-hidden cursor-pointer group hover:border-accent transition-all duration-300"
@@ -97,22 +98,39 @@ const CharacterSheet: React.FC = () => {
             ))}
           </div>
 
-          {/* Resource Bars */}
-          <div className="w-full space-y-2">
-            <ResourceBar
-              label={t("resource.stamina")}
-              current={coreAttributes.stamina}
-              max={coreAttributes.staminaMax}
-              variant="stamina"
-              tooltip={t("resource.staminaTooltip")}
-            />
-            <ResourceBar
-              label={t("resource.mana")}
-              current={coreAttributes.mana}
-              max={coreAttributes.manaMax}
-              variant="mana"
-              tooltip={t("resource.manaTooltip", { regen: coreAttributes.manaRegen })}
-            />
+          {/* Horizontal Resource Bars */}
+          <div className="w-full flex flex-col gap-1.5 px-2">
+            {/* Stamina (HP) Bar */}
+            <WowTooltip title={t("resource.stamina")} description={t("resource.staminaTooltip")} stats={[{ label: t("character.current"), value: `${coreAttributes.stamina}/${coreAttributes.staminaMax}` }]}>
+              <div className="relative h-5 w-full rounded-sm border border-primary/50 bg-background overflow-hidden cursor-pointer">
+                <div
+                  className="absolute top-0 left-0 bottom-0 rounded-sm bg-gradient-to-r from-green-700 via-green-500 to-green-400 transition-all duration-700"
+                  style={{ width: `${(coreAttributes.stamina / coreAttributes.staminaMax) * 100}%` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-[9px] font-bold text-foreground drop-shadow-md tracking-wider">
+                    {t("resource.stamina")}: {coreAttributes.stamina} / {coreAttributes.staminaMax}
+                  </span>
+                </div>
+              </div>
+            </WowTooltip>
+
+            {/* Mana Bar */}
+            <WowTooltip title={t("resource.mana")} description={t("resource.manaTooltip", { regen: coreAttributes.manaRegen })} stats={[{ label: t("character.current"), value: `${coreAttributes.mana}/${coreAttributes.manaMax}` }]}>
+              <div className="relative h-5 w-full rounded-sm border border-primary/50 bg-background overflow-hidden cursor-pointer">
+                <div
+                  className="absolute top-0 left-0 bottom-0 rounded-sm bg-gradient-to-r from-blue-800 via-blue-500 to-blue-400 transition-all duration-700"
+                  style={{ width: `${(coreAttributes.mana / coreAttributes.manaMax) * 100}%` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-[9px] font-bold text-foreground drop-shadow-md tracking-wider">
+                    {t("resource.mana")}: {coreAttributes.mana} / {coreAttributes.manaMax}
+                  </span>
+                </div>
+              </div>
+            </WowTooltip>
           </div>
 
           {/* Add to Friend List */}
@@ -167,6 +185,19 @@ const CharacterSheet: React.FC = () => {
                 </div>
               </WowTooltip>
             ))}
+
+            {/* Unique Skill - Lazy Soul */}
+            <div className="pt-2 border-t border-border">
+              <WowTooltip title={t("data.uniqueSkill.name")} description={t("data.uniqueSkill.description")}>
+                <div className="flex items-center gap-2 p-1.5 rounded hover:bg-secondary/50 transition-colors cursor-pointer animate-gold-pulse">
+                  <div className="w-6 h-6 border border-accent rounded-sm bg-accent/10 flex items-center justify-center text-accent">
+                    <Sparkles className="w-3 h-3" />
+                  </div>
+                  <span className="text-xs text-accent font-semibold">{t("data.uniqueSkill.name")}</span>
+                  <span className="text-[10px] text-muted-foreground ml-auto">{t("character.unique")}</span>
+                </div>
+              </WowTooltip>
+            </div>
           </div>
         </div>
 
@@ -189,18 +220,6 @@ const CharacterSheet: React.FC = () => {
             ))}
           </div>
 
-          {/* Unique Skill */}
-          <div className="mt-3 pt-3 border-t border-border">
-            <WowTooltip title={t("data.uniqueSkill.name")} description={t("data.uniqueSkill.description")}>
-              <div className="flex items-center gap-2 p-1.5 rounded hover:bg-secondary/50 transition-colors cursor-pointer animate-gold-pulse">
-                <div className="w-6 h-6 border border-accent rounded-sm bg-accent/10 flex items-center justify-center text-accent">
-                  <Sparkles className="w-3 h-3" />
-                </div>
-                <span className="text-xs text-accent font-semibold">{t("data.uniqueSkill.name")}</span>
-                <span className="text-[10px] text-muted-foreground ml-auto">{t("character.unique")}</span>
-              </div>
-            </WowTooltip>
-          </div>
         </div>
 
         {/* Hobbies */}

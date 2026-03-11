@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import WowTooltip from "./WowTooltip";
 
 interface ResourceBarProps {
@@ -10,6 +11,7 @@ interface ResourceBarProps {
 }
 
 const ResourceBar: React.FC<ResourceBarProps> = ({ label, current, max, variant, tooltip }) => {
+  const { t } = useTranslation();
   const pct = (current / max) * 100;
   const barColors = {
     stamina: "from-green-700 via-green-500 to-green-400",
@@ -33,7 +35,7 @@ const ResourceBar: React.FC<ResourceBarProps> = ({ label, current, max, variant,
 
   if (tooltip) {
     return (
-      <WowTooltip title={label} description={tooltip} stats={[{ label: "Current", value: `${current}/${max}` }]}>
+      <WowTooltip title={label} description={tooltip} stats={[{ label: t("character.current"), value: `${current}/${max}` }]}>
         {bar}
       </WowTooltip>
     );
