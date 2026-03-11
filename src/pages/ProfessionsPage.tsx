@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { professions } from "@/data/mockData";
 import WowTooltip from "@/components/WowTooltip";
 import { Monitor, Server, Phone } from "lucide-react";
@@ -10,12 +11,14 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const ProfessionsPage: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col gap-6 h-full p-4 md:p-8 max-w-4xl mx-auto">
       <div className="text-center mb-4">
-        <h1 className="font-heading text-2xl text-accent">Professions</h1>
+        <h1 className="font-heading text-2xl text-accent">{t("professions.title")}</h1>
         <p className="text-xs text-muted-foreground tracking-widest uppercase mt-1">
-          Primary Skills
+          {t("professions.subtitle")}
         </p>
       </div>
 
@@ -25,10 +28,10 @@ const ProfessionsPage: React.FC = () => {
           return (
             <WowTooltip
               key={prof.id}
-              title={prof.name}
-              description={prof.description}
+              title={t(`data.professions.${prof.id}.name`)}
+              description={t(`data.professions.${prof.id}.description`)}
               stats={[
-                { label: "Skill Level", value: `${prof.level}/${prof.maxLevel}` },
+                { label: t("professions.skillLevel"), value: `${prof.level}/${prof.maxLevel}` },
               ]}
             >
               <div className="border border-border rounded bg-card/60 p-5 hover:border-primary transition-colors cursor-pointer group">
@@ -37,7 +40,7 @@ const ProfessionsPage: React.FC = () => {
                     {iconMap[prof.icon] || <Monitor className="w-6 h-6 text-primary" />}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-sm font-semibold text-foreground">{prof.name}</h3>
+                    <h3 className="text-sm font-semibold text-foreground">{t(`data.professions.${prof.id}.name`)}</h3>
                   </div>
                   <span className="text-sm font-bold text-wow-parchment">
                     {prof.level}/{prof.maxLevel}

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { talentNodes, talentEdges } from "@/data/mockData";
 import WowTooltip from "@/components/WowTooltip";
 import {
@@ -42,14 +43,15 @@ const NODE_SIZE = 56;
 const OFFSET_X = 50;
 const OFFSET_Y = 40;
 
-const treeLabels: Record<string, { label: string; xCenter: number }> = {
-  frontend: { label: "Frontend", xCenter: 1.5 },
-  backend: { label: "Backend", xCenter: 5 },
-  sql: { label: "SQL / NoSQL", xCenter: 8 },
-  voip: { label: "VoIP / Telecom", xCenter: 10.5 },
+const treeCenters: Record<string, number> = {
+  frontend: 1.5,
+  backend: 5,
+  sql: 8,
+  voip: 10.5,
 };
 
 const TalentTree: React.FC = () => {
+  const { t } = useTranslation();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [activeTree, setActiveTree] = useState<string | null>(null);
 
@@ -102,9 +104,9 @@ const TalentTree: React.FC = () => {
   return (
     <div className="flex flex-col h-full p-4 md:p-6">
       <div className="text-center mb-3">
-        <h1 className="font-heading text-2xl text-accent">Talent Tree</h1>
+        <h1 className="font-heading text-2xl text-accent">{t("talents.title")}</h1>
         <p className="text-xs text-muted-foreground tracking-widest uppercase mt-1">
-          Technology Specializations
+          {t("talents.subtitle")}
         </p>
       </div>
 
@@ -118,19 +120,19 @@ const TalentTree: React.FC = () => {
               : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
           }`}
         >
-          All Trees
+          {t("talents.allTrees")}
         </button>
-        {trees.map((t) => (
+        {trees.map((tr) => (
           <button
-            key={t}
-            onClick={() => setActiveTree(t)}
+            key={tr}
+            onClick={() => setActiveTree(tr)}
             className={`px-3 py-1.5 text-xs font-heading uppercase tracking-wider rounded-sm border transition-all cursor-pointer ${
-              activeTree === t
+              activeTree === tr
                 ? "border-primary bg-primary/20 text-accent"
                 : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
             }`}
           >
-            {treeLabels[t]?.label || t}
+            {t(`talents.${tr}`)}
           </button>
         ))}
       </div>
@@ -144,18 +146,18 @@ const TalentTree: React.FC = () => {
             className="block"
           >
             {/* Tree labels */}
-            {Object.entries(treeLabels).map(([key, val]) => {
+            {Object.entries(treeCenters).map(([key, xCenter]) => {
               if (activeTree && activeTree !== key) return null;
               return (
                 <text
                   key={key}
-                  x={OFFSET_X + val.xCenter * CELL}
+                  x={OFFSET_X + xCenter * CELL}
                   y={OFFSET_Y - 14}
                   textAnchor="middle"
                   className="fill-primary font-heading"
                   fontSize="11"
                 >
-                  {val.label}
+                  {t(`talents.${key}`)}
                 </text>
               );
             })}
@@ -197,11 +199,11 @@ const TalentTree: React.FC = () => {
                   >
                     <WowTooltip
                       title={node.name}
-                      description={node.description}
-                      rank={isLearned ? "Learned" : "Locked"}
+                      description={t(`data.talentDescriptions.${node.id}`, { defaultValue: node.description })}
+                      rank={isLearned ? t("talents.learned") : t("talents.locked")}
                       stats={[
-                        { label: "Tree", value: node.tree.charAt(0).toUpperCase() + node.tree.slice(1) },
-                        { label: "Status", value: isLearned ? "Active" : "Requires prerequisites" },
+                        { label: t("talents.tree"), value: t(`talents.${node.tree}`) },
+                        { label: t("talents.status"), value: isLearned ? t("talents.active") : t("talents.requiresPrerequisites") },
                       ]}
                     >
                       <div

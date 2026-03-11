@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { backpack } from "@/data/mockData";
 import WowTooltip from "@/components/WowTooltip";
 import {
@@ -43,6 +44,7 @@ const rarityGlow: Record<string, string> = {
 };
 
 const InventoryPage: React.FC = () => {
+  const { t } = useTranslation();
   // Fill grid to 24 slots
   const totalSlots = 24;
   const emptySlots = totalSlots - backpack.length;
@@ -50,9 +52,9 @@ const InventoryPage: React.FC = () => {
   return (
     <div className="flex flex-col gap-6 h-full p-4 md:p-8 max-w-4xl mx-auto">
       <div className="text-center mb-2">
-        <h1 className="font-heading text-2xl text-accent">Inventory</h1>
+        <h1 className="font-heading text-2xl text-accent">{t("inventory.title")}</h1>
         <p className="text-xs text-muted-foreground tracking-widest uppercase mt-1">
-          Backpack — {backpack.length}/{totalSlots} Slots Used
+          {t("inventory.backpack")} — {t("inventory.slotsUsed", { used: backpack.length, total: totalSlots })}
         </p>
       </div>
 
@@ -61,8 +63,8 @@ const InventoryPage: React.FC = () => {
           {backpack.map((item) => (
             <WowTooltip
               key={item.id}
-              title={item.name}
-              description={item.description}
+              title={t(`data.backpack.${item.id}.name`)}
+              description={t(`data.backpack.${item.id}.description`)}
               rank={item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1)}
             >
               <div
@@ -72,7 +74,7 @@ const InventoryPage: React.FC = () => {
                   {iconMap[item.icon] || <Package className="w-6 h-6" />}
                 </div>
                 <span className="text-[8px] leading-tight text-center font-semibold px-0.5 truncate w-full">
-                  {item.name}
+                  {t(`data.backpack.${item.id}.name`)}
                 </span>
               </div>
             </WowTooltip>

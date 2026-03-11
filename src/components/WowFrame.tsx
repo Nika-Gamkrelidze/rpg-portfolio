@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const WowFrame: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLang] = useState("en");
+  const { t } = useTranslation();
 
   return (
     <div className="fixed inset-0 flex flex-col bg-background">
@@ -10,9 +11,9 @@ const WowFrame: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div className="relative h-10 flex items-center justify-between px-4 border-b border-primary/30">
         <div className="h-[2px] absolute bottom-0 left-0 right-0 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
         <div className="text-xs font-heading text-primary tracking-widest uppercase opacity-70">
-          WoW Portfolio
+          {t("frame.title")}
         </div>
-        <LanguageSwitcher current={lang} onChange={setLang} />
+        <LanguageSwitcher />
       </div>
 
       {/* Main content with side borders */}
