@@ -44,8 +44,8 @@ export const characterInfo = {
   level: 60,
   guild: "<Code Warriors>",
   avatars: {
-    real: "/placeholder.svg",
-    priest: "/placeholder.svg",
+    real: "/avatars/me.jpeg",
+    priest: "/avatars/proest.PNG",
   },
   contact: {
     email: "your.email@example.com",

@@ -125,7 +125,7 @@ const CharacterSheet: React.FC = () => {
             <h3 className="font-heading text-xs text-primary uppercase tracking-wider mb-3">
               {t("character.attributes")}
             </h3>
-            <div className="space-y-2">
+            <div className="grid grid-cols-2 gap-2">
               {characterStats.map((stat) => (
                 <WowTooltip
                   key={stat.id}
@@ -156,7 +156,7 @@ const CharacterSheet: React.FC = () => {
           <h3 className="font-heading text-xs text-primary uppercase tracking-wider mb-3">
             {t("character.softSkills")}
           </h3>
-          <div className="space-y-2">
+          <div className="flex flex-col gap-2">
             {softSkills.map((skill) => (
               <WowTooltip key={skill.id} title={t(`data.softSkills.${skill.id}.name`)} description={t(`data.softSkills.${skill.id}.description`)}>
                 <div className="flex items-center gap-2 p-1.5 rounded hover:bg-secondary/50 transition-colors cursor-pointer">
@@ -203,22 +203,20 @@ const CharacterSheet: React.FC = () => {
           </div>
         </div>
 
-        {/* Hobbies (Passive Buffs) */}
+        {/* Hobbies */}
         <div className="border border-border rounded bg-card/40 p-4">
           <h3 className="font-heading text-xs text-primary uppercase tracking-wider mb-3">
             {t("character.activeBuffs")}
           </h3>
-          <div className="space-y-2">
+          <div className="flex flex-col gap-2">
             {hobbies.map((hobby) => (
               <WowTooltip key={hobby.id} title={t(`data.hobbies.${hobby.id}.name`)} description={`${t("character.passiveEffect")}: ${t(`data.hobbies.${hobby.id}.effect`)}`}>
                 <div className="flex items-center gap-2 p-1.5 rounded hover:bg-secondary/50 transition-colors cursor-pointer">
                   <div className="w-6 h-6 border border-wow-green/50 rounded-sm bg-wow-green/5 flex items-center justify-center text-wow-green">
                     {hobbyIcons[hobby.id] || <Star className="w-3 h-3" />}
                   </div>
-                  <div className="flex-1">
-                    <span className="text-xs text-foreground">{t(`data.hobbies.${hobby.id}.name`)}</span>
-                    <p className="text-[10px] text-wow-green">{t(`data.hobbies.${hobby.id}.effect`)}</p>
-                  </div>
+                  <span className="text-xs text-foreground flex-1">{t(`data.hobbies.${hobby.id}.name`)}</span>
+                  <span className="text-[10px] text-wow-green">{t(`data.hobbies.${hobby.id}.effect`)}</span>
                 </div>
               </WowTooltip>
             ))}
@@ -230,7 +228,7 @@ const CharacterSheet: React.FC = () => {
           <h3 className="font-heading text-xs text-primary uppercase tracking-wider mb-3">
             {t("character.beliefsDoctrines")}
           </h3>
-          <div className="space-y-2">
+          <div className="flex flex-col gap-2">
             {religion.map((belief) => {
               const key = religionKeys[belief] || belief.toLowerCase();
               const beliefName = t(`data.religion.${key}`);
