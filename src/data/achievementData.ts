@@ -1,0 +1,66 @@
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  year: string;
+  teamSize: number;
+  icon: string;
+  completed: boolean;
+}
+
+export const dungeonsConquered: Achievement[] = [
+  {
+    id: "web-chat",
+    title: "Web-Chat Software",
+    description: "Built a real-time web-chat application with WebSocket integration, user authentication, and message persistence. Handled concurrent connections and scaling challenges.",
+    year: "2023",
+    teamSize: 5,
+    icon: "MessageSquare",
+    completed: true,
+  },
+  {
+    id: "voip-platform",
+    title: "VoIP Communication Platform",
+    description: "Developed an enterprise-grade VoIP platform integrating Asterisk PBX with custom IVR flows, SIP trunking, and real-time call monitoring dashboards.",
+    year: "2022",
+    teamSize: 4,
+    icon: "Phone",
+    completed: true,
+  },
+  {
+    id: "ecommerce",
+    title: "E-Commerce Portal",
+    description: "Architected a full-stack e-commerce solution with payment gateway integration, inventory management, and admin dashboard. Processed thousands of daily transactions.",
+    year: "2022",
+    teamSize: 6,
+    icon: "ShoppingCart",
+    completed: true,
+  },
+  {
+    id: "crm-system",
+    title: "CRM System",
+    description: "Designed and implemented a customer relationship management system with lead tracking, automated email campaigns, and analytics reporting.",
+    year: "2021",
+    teamSize: 3,
+    icon: "Users",
+    completed: true,
+  },
+  {
+    id: "api-gateway",
+    title: "API Gateway & Microservices",
+    description: "Built a centralized API gateway managing authentication, rate limiting, and routing across multiple microservices. Deployed with Docker and Kubernetes.",
+    year: "2023",
+    teamSize: 4,
+    icon: "Network",
+    completed: true,
+  },
+  {
+    id: "monitoring",
+    title: "Infrastructure Monitoring Suite",
+    description: "Created a monitoring dashboard aggregating logs, metrics, and alerts from distributed systems. Integrated Grafana, Prometheus, and custom alert handlers.",
+    year: "2021",
+    teamSize: 2,
+    icon: "Activity",
+    completed: true,
+  },
+];
