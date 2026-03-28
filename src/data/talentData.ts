@@ -3,7 +3,8 @@ export interface TalentNode {
   name: string;
   description: string;
   icon: string;
-  tree: "frontend" | "backend" | "sql" | "voip";
+  tree: "frontend" | "backend" | "sql" | "voip" | "shared";
+  sharedTrees?: string[];
   x: number;
   y: number;
   learned: boolean;
@@ -19,7 +20,6 @@ export const talentNodes: TalentNode[] = [
   // ─── Frontend Tree ───
   { id: "html", name: "HTML", description: "The foundation of all web structures. Mastery of semantic markup and accessibility incantations.", icon: "FileCode", tree: "frontend", x: 0, y: 0, learned: true, prerequisites: [] },
   { id: "css", name: "CSS", description: "The art of visual enchantment. Command over layouts, animations, and responsive transformations.", icon: "Palette", tree: "frontend", x: 1, y: 0, learned: true, prerequisites: [] },
-  { id: "js", name: "JavaScript", description: "The language of interactivity. Wield the power of dynamic scripting and DOM manipulation.", icon: "Braces", tree: "frontend", x: 2, y: 0, learned: true, prerequisites: [] },
   { id: "scss", name: "SCSS", description: "Advanced CSS sorcery. Variables, mixins, and nesting grant superior styling power.", icon: "Brush", tree: "frontend", x: 0, y: 1, learned: true, prerequisites: ["css"] },
   { id: "php", name: "PHP", description: "Server-side scripting language. The old-world magic that still powers much of the web.", icon: "FileCode", tree: "frontend", x: 2, y: 1, learned: true, prerequisites: ["js"] },
   { id: "web-frontend", name: "Web Frontend", description: "The convergence of HTML, CSS, and JavaScript. Unlocks React, Vue, and modern framework mastery.", icon: "Layout", tree: "frontend", x: 1, y: 2, learned: true, prerequisites: ["html", "css", "js"] },
@@ -29,14 +29,17 @@ export const talentNodes: TalentNode[] = [
   { id: "laravel", name: "Laravel", description: "The artisan's PHP framework. Eloquent ORM, Blade templating, and elegant syntax for rapid development.", icon: "Gem", tree: "frontend", x: 3, y: 2, learned: true, prerequisites: ["php"] },
   { id: "mvc", name: "MVC Pattern", description: "Model-View-Controller architecture. The sacred pattern for organizing code into logical domains.", icon: "Layers", tree: "frontend", x: 2.5, y: 3, learned: true, prerequisites: ["yii2", "laravel"] },
 
+  // ─── Shared ───
+  { id: "js", name: "JavaScript", description: "The language of interactivity. Wield the power of dynamic scripting and DOM manipulation.", icon: "Braces", tree: "shared", sharedTrees: ["frontend", "backend"], x: 3.5, y: 0, learned: true, prerequisites: [] },
+
   // ─── Backend Tree ───
-  { id: "nodejs", name: "Node.js", description: "Server-side JavaScript runtime. Harness the power of V8 to build scalable network applications.", icon: "Hexagon", tree: "backend", x: 5, y: 0, learned: true, prerequisites: [] },
+  { id: "nodejs", name: "Node.js", description: "Server-side JavaScript runtime. Harness the power of V8 to build scalable network applications.", icon: "Hexagon", tree: "backend", x: 5, y: 0, learned: true, prerequisites: ["js"] },
   { id: "nextjs", name: "Next.js", description: "The React meta-framework. Server-side rendering, static generation, and API routes in one package.", icon: "Triangle", tree: "backend", x: 5, y: 1, learned: true, prerequisites: ["nodejs"] },
   { id: "backend-web", name: "Backend Web", description: "Full server-side mastery. REST APIs, authentication, database design, and deployment strategies.", icon: "Database", tree: "backend", x: 5, y: 2, learned: true, prerequisites: ["nextjs"] },
   { id: "restful-api", name: "RESTful API", description: "Representational State Transfer. Design and implement clean, resource-oriented web service interfaces.", icon: "ArrowLeftRight", tree: "backend", x: 4, y: 2, learned: true, prerequisites: ["nodejs"] },
   { id: "ajax", name: "AJAX", description: "Asynchronous JavaScript and XML. Enables dynamic page updates without full reloads.", icon: "RefreshCw", tree: "backend", x: 4, y: 1, learned: true, prerequisites: ["nodejs"] },
   { id: "socketio", name: "Socket.io", description: "Real-time event-based communication library. Bidirectional data flow between client and server.", icon: "Radio", tree: "backend", x: 6, y: 2, learned: true, prerequisites: ["backend-web"] },
-  { id: "websockets", name: "WebSockets", description: "Real-time bidirectional communication protocol. The ultimate synergy for live data streams.", icon: "Zap", tree: "backend", x: 6, y: 3, learned: false, prerequisites: ["socketio", "backend-web"] },
+  { id: "websockets", name: "WebSockets", description: "Real-time bidirectional communication protocol. The ultimate synergy for live data streams.", icon: "Zap", tree: "backend", x: 6, y: 3, learned: true, prerequisites: ["socketio", "backend-web"] },
 
   // ─── SQL Tree ───
   { id: "relational-db", name: "Relational DB", description: "Structured data storage with tables, relations, and SQL query language. The bedrock of data persistence.", icon: "Database", tree: "sql", x: 8, y: 0, learned: true, prerequisites: [] },
@@ -76,6 +79,7 @@ export const talentEdges: TalentEdge[] = [
   { from: "yii2", to: "mvc" },
   { from: "laravel", to: "mvc" },
   // Backend
+  { from: "js", to: "nodejs" },
   { from: "nodejs", to: "nextjs" },
   { from: "nodejs", to: "ajax" },
   { from: "nodejs", to: "restful-api" },

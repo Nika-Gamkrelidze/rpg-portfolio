@@ -1,0 +1,158 @@
+{
+  "characterInfo": {
+    "name": "Nika Gamkrelidze",
+    "class": "Priest",
+    "race": "Human",
+    "kingdom": "Georgia",
+    "province": "Tbilisi",
+    "city": "Tbilisi",
+    "title": "Full-Stack Developer",
+    "level": 60,
+    "guild": "<Code Warriors>",
+    "avatars": {
+      "real": "/avatars/me.jpeg",
+      "priest": "/avatars/priest.png"
+    },
+    "contact": {
+      "email": "nika.gamkrelidze.21@gmail.com",
+      "mobile": "+995 598 24 74 77",
+      "linkedIn": "https://www.linkedin.com/in/nika-gamkrelidze/",
+      "gitHub": "https://github.com/Nika-Gamkrelidze"
+    },
+    "summary": "A seasoned full-stack developer with a passion for building immersive web experiences. Skilled in both frontend artistry and backend architecture, this developer combines creativity with technical precision to craft exceptional digital solutions."
+  },
+  "characterStats": [
+    {
+      "id": "iq",
+      "label": "IQ",
+      "value": 142,
+      "description": "Raw cognitive processing power."
+    },
+    {
+      "id": "intellect",
+      "label": "Intellect",
+      "value": 96,
+      "description": "Deep understanding of complex systems."
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Troubleshooting",
+      "value": 88,
+      "description": "Ability to diagnose and resolve bugs."
+    },
+    {
+      "id": "problem-solving",
+      "label": "Problem Solving",
+      "value": 91,
+      "description": "Creative approach to technical challenges."
+    },
+    {
+      "id": "fast-learning",
+      "label": "Fast Learning",
+      "value": 85,
+      "description": "Speed of acquiring new technologies."
+    }
+  ],
+  "coreAttributes": {
+    "stamina": 100,
+    "staminaMax": 100,
+    "mana": 150,
+    "manaMax": 150,
+    "manaRegen": 10
+  },
+  "softSkills": [
+    {
+      "id": "prompt-gen",
+      "name": "Prompt Generation",
+      "description": "Saves AI tokens, faster responses.",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "humor",
+      "name": "Humor",
+      "description": "Team communication, grants mana regen to party.",
+      "icon": "Smile"
+    },
+    {
+      "id": "organizing",
+      "name": "Organizing",
+      "description": "Code architecture, documentation, schedules.",
+      "icon": "FolderTree"
+    },
+    {
+      "id": "responsible",
+      "name": "Responsible",
+      "description": "Finishes chores, strictly adheres to deadlines.",
+      "icon": "CheckCircle"
+    }
+  ],
+  "languages": [
+    {
+      "id": "geo",
+      "name": "Georgian",
+      "proficiency": "Native",
+      "icon": "Languages"
+    },
+    {
+      "id": "ru",
+      "name": "Russian",
+      "proficiency": "Fluent",
+      "icon": "Languages"
+    },
+    {
+      "id": "en",
+      "name": "English",
+      "proficiency": "Professional",
+      "icon": "Languages"
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "proficiency": "Advanced",
+      "icon": "Bot"
+    }
+  ],
+  "uniqueSkill": {
+    "name": "Lazy Soul",
+    "description": "Routine jobs are automatically automated by code, scripts, or AI.",
+    "icon": "Sparkles"
+  },
+  "hobbies": [
+    {
+      "id": "painting",
+      "name": "Painting",
+      "effect": "+10% Creativity",
+      "icon": "Paintbrush"
+    },
+    {
+      "id": "musical",
+      "name": "Musical",
+      "effect": "+5% Creativity, +2% Stamina",
+      "icon": "Music"
+    },
+    {
+      "id": "online-games",
+      "name": "Online Games",
+      "effect": "+5% Intellect",
+      "icon": "Gamepad2"
+    },
+    {
+      "id": "board-games",
+      "name": "Board Games",
+      "effect": "+5% Intellect",
+      "icon": "Dice5"
+    },
+    {
+      "id": "walking",
+      "name": "New Hobby",
+      "effect": "+5% Something",
+      "icon": "Star"
+    }
+  ],
+  "religion": [
+    "Agile",
+    "Scrum",
+    "Waterfall",
+    "Clean Code"
+  ]
+}

@@ -87,7 +87,7 @@ const TalentTree: React.FC = () => {
   }, [hoveredId]);
 
   const filteredNodes = activeTree
-    ? talentNodes.filter((n) => n.tree === activeTree)
+    ? talentNodes.filter((n) => n.tree === activeTree || (n.tree === "shared" && n.sharedTrees?.includes(activeTree)))
     : talentNodes;
 
   const filteredNodeIds = new Set(filteredNodes.map((n) => n.id));
@@ -95,10 +95,14 @@ const TalentTree: React.FC = () => {
     (e) => filteredNodeIds.has(e.from) && filteredNodeIds.has(e.to)
   );
 
-  // Calculate SVG bounds
+  // Calculate SVG bounds based on actual filtered node range
+  const minX = Math.min(...filteredNodes.map((n) => n.x));
   const maxX = Math.max(...filteredNodes.map((n) => n.x));
+  const minY = Math.min(...filteredNodes.map((n) => n.y));
   const maxY = Math.max(...filteredNodes.map((n) => n.y));
-  const svgWidth = OFFSET_X * 2 + (maxX + 1) * CELL + NODE_SIZE;
+  const viewMinX = OFFSET_X + minX * CELL - OFFSET_X;
+  const viewMinY = 0;
+  const svgWidth = OFFSET_X * 2 + (maxX - minX + 1) * CELL + NODE_SIZE;
   const svgHeight = OFFSET_Y * 2 + (maxY + 1) * CELL + NODE_SIZE;
 
   return (
@@ -137,12 +141,12 @@ const TalentTree: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex-1 overflow-auto flex items-start justify-center">
-        <div className="border border-primary rounded bg-card/30 p-2 inline-block">
+      <div className="flex-1 overflow-auto">
+        <div className="border border-primary rounded bg-card/30 p-2 mx-auto w-fit">
           <svg
             width={svgWidth}
             height={svgHeight}
-            viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+            viewBox={`${viewMinX} ${viewMinY} ${svgWidth} ${svgHeight}`}
             className="block"
           >
             {/* Tree labels */}
@@ -202,7 +206,7 @@ const TalentTree: React.FC = () => {
                       description={t(`data.talentDescriptions.${node.id}`, { defaultValue: node.description })}
                       rank={isLearned ? t("talents.learned") : t("talents.locked")}
                       stats={[
-                        { label: t("talents.tree"), value: t(`talents.${node.tree}`) },
+                        { label: t("talents.tree"), value: node.tree === "shared" && node.sharedTrees ? node.sharedTrees.map((tr) => t(`talents.${tr}`)).join(" / ") : t(`talents.${node.tree}`) },
                         { label: t("talents.status"), value: isLearned ? t("talents.active") : t("talents.requiresPrerequisites") },
                       ]}
                     >

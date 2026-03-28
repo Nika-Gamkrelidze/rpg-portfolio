@@ -1,0 +1,199 @@
+{
+  "frame": {
+    "title": "WoW Portfolio"
+  },
+  "nav": {
+    "character": "Character",
+    "professions": "Professions",
+    "talents": "Talents",
+    "inventory": "Inventory",
+    "achievements": "Achievements"
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "character": {
+    "level": "Level",
+    "biography": "Biography",
+    "attributes": "Attributes",
+    "softSkills": "Soft Skills",
+    "languageProficiencies": "Language Proficiencies",
+    "activeBuffs": "Hobbies",
+    "beliefsDoctrines": "Beliefs & Doctrines",
+    "clickToSwap": "Click to swap",
+    "addToFriendList": "Add to Friend List",
+    "contactScroll": "Contact Scroll",
+    "contactRunesMessage": "{{name}} wishes to share their contact runes",
+    "email": "Email",
+    "mobile": "Mobile",
+    "linkedIn": "LinkedIn",
+    "gitHub": "GitHub",
+    "unique": "Unique",
+    "rating": "Rating",
+    "current": "Current",
+    "proficiency": "Proficiency",
+    "passiveEffect": "Passive effect",
+    "followsPath": "Follows the path of {{belief}}. Grants bonus efficiency to project workflows."
+  },
+  "resource": {
+    "stamina": "Stamina",
+    "mana": "Mana",
+    "staminaTooltip": "Stress and deadline endurance. Higher stamina means greater tolerance for crunch periods.",
+    "manaTooltip": "Work time per day. Mana Regen: {{regen}}/hr. Increases by consuming mood-driving events."
+  },
+  "professions": {
+    "title": "Professions",
+    "subtitle": "Primary Skills",
+    "skillLevel": "Skill Level"
+  },
+  "talents": {
+    "title": "Talent Tree",
+    "subtitle": "Technology Specializations",
+    "allTrees": "All Trees",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "sql": "SQL / NoSQL",
+    "voip": "VoIP / Telecom",
+    "learned": "Learned",
+    "locked": "Locked",
+    "active": "Active",
+    "requiresPrerequisites": "Requires prerequisites",
+    "tree": "Tree",
+    "status": "Status"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "backpack": "Backpack",
+    "slotsUsed": "{{used}}/{{total}} Slots Used"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "dungeonsConquered": "Dungeons Conquered",
+    "cleared": "Cleared",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "year": "Year",
+    "partySize": "Party Size",
+    "partyOf": "Party of {{size}}"
+  },
+  "data": {
+    "characterInfo": {
+      "name": "Your Name",
+      "class": "Priest",
+      "race": "Human",
+      "kingdom": "Georgia",
+      "province": "Tbilisi",
+      "city": "Tbilisi",
+      "title": "Full-Stack Developer",
+      "guild": "<Code Warriors>",
+      "summary": "A seasoned full-stack developer with a passion for building immersive web experiences. Skilled in both frontend artistry and backend architecture, this developer combines creativity with technical precision to craft exceptional digital solutions."
+    },
+    "stats": {
+      "iq": { "label": "IQ", "description": "Raw cognitive processing power. Affects ability to learn new frameworks overnight." },
+      "intellect": { "label": "Intellect", "description": "Deep understanding of complex systems. Increases critical thinking by 12%." },
+      "troubleshooting": { "label": "Troubleshooting", "description": "Ability to diagnose and resolve bugs. Reduces debugging time by 40%." },
+      "problem-solving": { "label": "Problem Solving", "description": "Creative approach to technical challenges. Grants a chance to find elegant solutions." },
+      "fast-learning": { "label": "Fast Learning", "description": "Speed of acquiring new technologies. Increases XP gain from documentation by 25%." }
+    },
+    "softSkills": {
+      "prompt-gen": { "name": "Prompt Generation", "description": "Saves AI tokens, faster responses. Reduces mana cost of AI-assisted spells by 30%." },
+      "humor": { "name": "Humor", "description": "Team communication, grants mana regen to party. +5 Mana Regen to all nearby allies." },
+      "organizing": { "name": "Organizing", "description": "Code architecture, documentation, schedules. Increases project completion speed by 20%." },
+      "responsible": { "name": "Responsible", "description": "Finishes chores, strictly adheres to deadlines. Grants immunity to 'Missed Deadline' debuff." }
+    },
+    "languages": {
+      "geo": { "name": "Georgian", "proficiency": "Native" },
+      "ru": { "name": "Russian", "proficiency": "Fluent" },
+      "en": { "name": "English", "proficiency": "Professional" },
+      "ai": { "name": "AI", "proficiency": "Advanced" }
+    },
+    "uniqueSkill": {
+      "name": "Lazy Soul",
+      "description": "Routine jobs are automatically automated by code, scripts, or AI. Passive effect: All repetitive tasks have a 100% chance to be delegated to automation."
+    },
+    "hobbies": {
+      "painting": { "name": "Painting", "effect": "+10% Creativity" },
+      "musical": { "name": "Musical", "effect": "+5% Creativity, +2% Stamina" },
+      "online-games": { "name": "Online Games", "effect": "+5% Intellect" },
+      "board-games": { "name": "Board Games", "effect": "+5% Intellect" }
+    },
+    "religion": {
+      "agile": "Agile",
+      "scrum": "Scrum",
+      "waterfall": "Waterfall",
+      "cleanCode": "Clean Code"
+    },
+    "professions": {
+      "frontend": { "name": "Frontend Web Developer", "description": "Master of the visual realm. Crafts pixel-perfect interfaces using React, TypeScript, and modern CSS. Specializes in responsive design and animation enchantments." },
+      "backend": { "name": "Backend Web Developer", "description": "Architect of the server-side. Builds robust APIs and database systems using Node.js, PostgreSQL, and cloud infrastructure. Expert in RESTful sorcery." },
+      "voip": { "name": "VoIP Developer", "description": "Specialist in real-time communications. Implements SIP, WebRTC, and telephony systems. Can establish voice channels across any network terrain." }
+    },
+    "talentDescriptions": {
+      "html": "The foundation of all web structures. Mastery of semantic markup and accessibility incantations.",
+      "css": "The art of visual enchantment. Command over layouts, animations, and responsive transformations.",
+      "js": "The language of interactivity. Wield the power of dynamic scripting and DOM manipulation.",
+      "scss": "Advanced CSS sorcery. Variables, mixins, and nesting grant superior styling power.",
+      "php": "Server-side scripting language. The old-world magic that still powers much of the web.",
+      "web-frontend": "The convergence of HTML, CSS, and JavaScript. Unlocks React, Vue, and modern framework mastery.",
+      "react-native": "Cross-platform mobile sorcery. Build native mobile apps using React's component model.",
+      "vuejs": "The progressive framework. Reactive data binding and component composition for elegant interfaces.",
+      "yii2": "High-performance PHP framework. MVC architecture with built-in security and caching enchantments.",
+      "laravel": "The artisan's PHP framework. Eloquent ORM, Blade templating, and elegant syntax for rapid development.",
+      "mvc": "Model-View-Controller architecture. The sacred pattern for organizing code into logical domains.",
+      "nodejs": "Server-side JavaScript runtime. Harness the power of V8 to build scalable network applications.",
+      "nextjs": "The React meta-framework. Server-side rendering, static generation, and API routes in one package.",
+      "backend-web": "Full server-side mastery. REST APIs, authentication, database design, and deployment strategies.",
+      "restful-api": "Representational State Transfer. Design and implement clean, resource-oriented web service interfaces.",
+      "ajax": "Asynchronous JavaScript and XML. Enables dynamic page updates without full reloads.",
+      "socketio": "Real-time event-based communication library. Bidirectional data flow between client and server.",
+      "websockets": "Real-time bidirectional communication protocol. The ultimate synergy for live data streams.",
+      "relational-db": "Structured data storage with tables, relations, and SQL query language. The bedrock of data persistence.",
+      "mysql": "The most widely-used open-source relational database. Fast reads, reliable replication.",
+      "postgresql": "Advanced open-source relational database. JSON support, full-text search, and extensibility.",
+      "nonrelational-db": "Schema-less document stores for flexible, high-velocity data. Key-value and document models.",
+      "mongodb": "Document-oriented NoSQL database. JSON-like documents with dynamic schemas for rapid iteration.",
+      "asterisk": "Open-source telephony engine. The foundation of custom PBX systems and call routing.",
+      "pbx": "Private Branch Exchange. Internal telephone switching system for enterprise communications.",
+      "freepbx": "Open-source PBX management GUI. Simplifies Asterisk configuration with a web interface.",
+      "elastix": "Unified communications platform built on Asterisk. Integrates email, IM, and fax with telephony.",
+      "cisco": "Enterprise networking and communications. The industry standard for large-scale deployments.",
+      "cucm": "Cisco Unified Communications Manager. Enterprise call control and session management.",
+      "uccx": "Cisco Unified Contact Center Express. IVR, ACD, and call queuing for contact centers.",
+      "cuic": "Cisco Unified Intelligence Center. Reporting and analytics for contact center operations.",
+      "cisco-ucs": "Cisco Unified Contact Systems. Full-stack enterprise communication and contact management.",
+      "sip": "Session Initiation Protocol. Signaling protocol for initiating, maintaining, and terminating voice sessions.",
+      "rtp": "Real-time Transport Protocol. Delivers audio and video over IP networks with timing information.",
+      "webrtc": "Web Real-Time Communication. Browser-native voice, video, and data channel capabilities.",
+      "tts-stt": "Text-to-Speech and Speech-to-Text. Voice synthesis and recognition for IVR and accessibility.",
+      "ivr-dev": "Interactive Voice Response systems. Automated call menus, DTMF handling, and call flow design."
+    },
+    "backpack": {
+      "vscode": { "name": "VS Code", "description": "Primary code editor. Enchanted with extensions for maximum productivity." },
+      "github": { "name": "GitHub", "description": "Version control fortress. Houses all repositories and collaboration portals." },
+      "docker": { "name": "Docker", "description": "Containerization engine. Ensures consistent deployment across all realms." },
+      "figma": { "name": "Figma", "description": "Design tool of the UI artisan. Pixel-perfect mockups and prototypes." },
+      "postman": { "name": "Postman", "description": "API testing companion. Sends requests across the network realm." },
+      "jira": { "name": "Jira", "description": "Quest tracker. Manages tasks, sprints, and epic storylines." },
+      "slack": { "name": "Slack", "description": "Guild communication channel. Real-time messaging across all party members." },
+      "terminal": { "name": "Terminal", "description": "Command-line interface. Direct access to system-level sorcery." },
+      "npm": { "name": "NPM", "description": "Package summoner. Calls forth libraries from the JavaScript registry." },
+      "chrome-devtools": { "name": "Chrome DevTools", "description": "Browser inspection lens. Reveals the hidden DOM and network secrets." },
+      "git": { "name": "Git", "description": "Time-travel device for code. Branch, merge, and revert through project history." },
+      "linux": { "name": "Linux", "description": "The open-source operating realm. Server management and scripting mastery." },
+      "aws": { "name": "AWS", "description": "Cloud infrastructure dominion. EC2, S3, Lambda — the pillars of deployment." },
+      "redis": { "name": "Redis", "description": "In-memory data cache. Lightning-fast reads for session and query storage." },
+      "nginx": { "name": "Nginx", "description": "Reverse proxy guardian. Routes traffic and serves static assets with speed." },
+      "webpack": { "name": "Webpack", "description": "Module bundler. Compiles and optimizes frontend assets into deployable bundles." }
+    },
+    "achievements": {
+      "web-chat": { "title": "Web-Chat Software", "description": "Built a real-time web-chat application with WebSocket integration, user authentication, and message persistence. Handled concurrent connections and scaling challenges." },
+      "voip-platform": { "title": "VoIP Communication Platform", "description": "Developed an enterprise-grade VoIP platform integrating Asterisk PBX with custom IVR flows, SIP trunking, and real-time call monitoring dashboards." },
+      "ecommerce": { "title": "E-Commerce Portal", "description": "Architected a full-stack e-commerce solution with payment gateway integration, inventory management, and admin dashboard. Processed thousands of daily transactions." },
+      "crm-system": { "title": "CRM System", "description": "Designed and implemented a customer relationship management system with lead tracking, automated email campaigns, and analytics reporting." },
+      "api-gateway": { "title": "API Gateway & Microservices", "description": "Built a centralized API gateway managing authentication, rate limiting, and routing across multiple microservices. Deployed with Docker and Kubernetes." },
+      "monitoring": { "title": "Infrastructure Monitoring Suite", "description": "Created a monitoring dashboard aggregating logs, metrics, and alerts from distributed systems. Integrated Grafana, Prometheus, and custom alert handlers." }
+    }
+  }
+}

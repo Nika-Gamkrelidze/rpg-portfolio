@@ -1,0 +1,114 @@
+[
+  {
+    "id": "vscode",
+    "name": "VS Code",
+    "description": "Primary code editor. Enchanted with extensions for maximum productivity.",
+    "icon": "Code",
+    "rarity": "legendary"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "description": "Version control fortress. Houses all repositories and collaboration portals.",
+    "icon": "Github",
+    "rarity": "epic"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "description": "Containerization engine. Ensures consistent deployment across all realms.",
+    "icon": "Container",
+    "rarity": "epic"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "description": "Design tool of the UI artisan. Pixel-perfect mockups and prototypes.",
+    "icon": "Figma",
+    "rarity": "rare"
+  },
+  {
+    "id": "postman",
+    "name": "Postman",
+    "description": "API testing companion. Sends requests across the network realm.",
+    "icon": "Send",
+    "rarity": "rare"
+  },
+  {
+    "id": "jira",
+    "name": "Jira",
+    "description": "Quest tracker. Manages tasks, sprints, and epic storylines.",
+    "icon": "ClipboardList",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "description": "Guild communication channel. Real-time messaging across all party members.",
+    "icon": "MessageCircle",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "terminal",
+    "name": "Terminal",
+    "description": "Command-line interface. Direct access to system-level sorcery.",
+    "icon": "Terminal",
+    "rarity": "rare"
+  },
+  {
+    "id": "npm",
+    "name": "NPM",
+    "description": "Package summoner. Calls forth libraries from the JavaScript registry.",
+    "icon": "Package",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "chrome-devtools",
+    "name": "Chrome DevTools",
+    "description": "Browser inspection lens. Reveals the hidden DOM and network secrets.",
+    "icon": "Search",
+    "rarity": "rare"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "description": "Time-travel device for code. Branch, merge, and revert through project history.",
+    "icon": "GitBranch",
+    "rarity": "epic"
+  },
+  {
+    "id": "linux",
+    "name": "Linux",
+    "description": "The open-source operating realm. Server management and scripting mastery.",
+    "icon": "Monitor",
+    "rarity": "rare"
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "description": "Cloud infrastructure dominion. EC2, S3, Lambda — the pillars of deployment.",
+    "icon": "Cloud",
+    "rarity": "epic"
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "description": "In-memory data cache. Lightning-fast reads for session and query storage.",
+    "icon": "Database",
+    "rarity": "rare"
+  },
+  {
+    "id": "nginx",
+    "name": "Nginx",
+    "description": "Reverse proxy guardian. Routes traffic and serves static assets with speed.",
+    "icon": "Shield",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "webpack",
+    "name": "Webpack",
+    "description": "Module bundler. Compiles and optimizes frontend assets into deployable bundles.",
+    "icon": "Boxes",
+    "rarity": "uncommon"
+  }
+]
