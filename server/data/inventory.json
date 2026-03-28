@@ -110,5 +110,89 @@
     "description": "Module bundler. Compiles and optimizes frontend assets into deployable bundles.",
     "icon": "Boxes",
     "rarity": "uncommon"
+  },
+  {
+    "id": "macos",
+    "name": "macOS",
+    "description": "Primary operating realm. Stable Unix-based environment for development and daily questing.",
+    "icon": "Laptop",
+    "rarity": "rare"
+  },
+  {
+    "id": "windows",
+    "name": "Windows",
+    "description": "Secondary operating realm. Familiar territory for enterprise tools and compatibility testing.",
+    "icon": "AppWindow",
+    "rarity": "common"
+  },
+  {
+    "id": "datagrip",
+    "name": "DataGrip",
+    "description": "Database IDE of the data sorcerer. Query, inspect, and manage SQL realms with precision.",
+    "icon": "DatabaseZap",
+    "rarity": "rare"
+  },
+  {
+    "id": "sftp",
+    "name": "SFTP",
+    "description": "Secure file transfer scroll. Moves artifacts between servers through encrypted tunnels.",
+    "icon": "FolderSync",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "zoom",
+    "name": "Zoom / Eleveo",
+    "description": "Video conferencing and collaboration portal. Bridges remote teams across any distance.",
+    "icon": "Video",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "callreplay",
+    "name": "CallReplay",
+    "description": "Call recording and playback artifact. Replay, review, and analyze recorded voice interactions.",
+    "icon": "PlayCircle",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "grafana",
+    "name": "Grafana",
+    "description": "Monitoring oracle. Visualizes metrics and system vitals through real-time dashboards.",
+    "icon": "BarChart2",
+    "rarity": "rare"
+  },
+  {
+    "id": "miro",
+    "name": "Miro",
+    "description": "Infinite whiteboard of the architect. Maps out flows, plans, and collaborative blueprints.",
+    "icon": "PenTool",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "freepbx",
+    "name": "FreePBX",
+    "description": "VoIP control panel. Manages extensions, call routing, and telephony configurations.",
+    "icon": "Phone",
+    "rarity": "rare"
+  },
+  {
+    "id": "elastrix",
+    "name": "Elastrix",
+    "description": "Telephony platform artifact. Powers unified communications and VoIP infrastructure.",
+    "icon": "Cpu",
+    "rarity": "rare"
+  },
+  {
+    "id": "wireshark",
+    "name": "Wireshark",
+    "description": "Network packet analyzer. Captures and deciphers raw traffic across the wire.",
+    "icon": "Activity",
+    "rarity": "epic"
+  },
+  {
+    "id": "active-directory",
+    "name": "Active Directory",
+    "description": "Domain authority. Manages identities, permissions, and access across the enterprise realm.",
+    "icon": "Users",
+    "rarity": "rare"
   }
 ]

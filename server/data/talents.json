@@ -116,12 +116,25 @@
       ]
     },
     {
+      "id": "redux",
+      "name": "React Redux",
+      "description": "Global state management for React. A single store of truth that controls the flow of data across all components.",
+      "icon": "GitMerge",
+      "tree": "frontend",
+      "x": 2,
+      "y": 3,
+      "learned": true,
+      "prerequisites": [
+        "web-frontend"
+      ]
+    },
+    {
       "id": "mvc",
       "name": "MVC Pattern",
       "description": "Model-View-Controller architecture. The sacred pattern for organizing code into logical domains.",
       "icon": "Layers",
       "tree": "frontend",
-      "x": 2.5,
+      "x": 3,
       "y": 3,
       "learned": true,
       "prerequisites": [
@@ -505,6 +518,10 @@
     {
       "from": "web-frontend",
       "to": "vuejs"
+    },
+    {
+      "from": "web-frontend",
+      "to": "redux"
     },
     {
       "from": "php",

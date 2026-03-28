@@ -167,7 +167,8 @@
       "rtp": "Real-time Transport Protocol. Delivers audio and video over IP networks with timing information.",
       "webrtc": "Web Real-Time Communication. Browser-native voice, video, and data channel capabilities.",
       "tts-stt": "Text-to-Speech and Speech-to-Text. Voice synthesis and recognition for IVR and accessibility.",
-      "ivr-dev": "Interactive Voice Response systems. Automated call menus, DTMF handling, and call flow design."
+      "ivr-dev": "Interactive Voice Response systems. Automated call menus, DTMF handling, and call flow design.",
+      "redux": "Global state management for React. A single store of truth that controls the flow of data across all components."
     },
     "backpack": {
       "vscode": { "name": "VS Code", "description": "Primary code editor. Enchanted with extensions for maximum productivity." },
@@ -185,7 +186,19 @@
       "aws": { "name": "AWS", "description": "Cloud infrastructure dominion. EC2, S3, Lambda — the pillars of deployment." },
       "redis": { "name": "Redis", "description": "In-memory data cache. Lightning-fast reads for session and query storage." },
       "nginx": { "name": "Nginx", "description": "Reverse proxy guardian. Routes traffic and serves static assets with speed." },
-      "webpack": { "name": "Webpack", "description": "Module bundler. Compiles and optimizes frontend assets into deployable bundles." }
+      "webpack": { "name": "Webpack", "description": "Module bundler. Compiles and optimizes frontend assets into deployable bundles." },
+      "macos": { "name": "macOS", "description": "Primary operating realm. Stable Unix-based environment for development and daily questing." },
+      "windows": { "name": "Windows", "description": "Secondary operating realm. Familiar territory for enterprise tools and compatibility testing." },
+      "datagrip": { "name": "DataGrip", "description": "Database IDE of the data sorcerer. Query, inspect, and manage SQL realms with precision." },
+      "sftp": { "name": "SFTP", "description": "Secure file transfer scroll. Moves artifacts between servers through encrypted tunnels." },
+      "zoom": { "name": "Zoom / Eleveo", "description": "Video conferencing and collaboration portal. Bridges remote teams across any distance." },
+      "callreplay": { "name": "CallReplay", "description": "Call recording and playback artifact. Replay, review, and analyze recorded voice interactions." },
+      "grafana": { "name": "Grafana", "description": "Monitoring oracle. Visualizes metrics and system vitals through real-time dashboards." },
+      "miro": { "name": "Miro", "description": "Infinite whiteboard of the architect. Maps out flows, plans, and collaborative blueprints." },
+      "freepbx": { "name": "FreePBX", "description": "VoIP control panel. Manages extensions, call routing, and telephony configurations." },
+      "elastrix": { "name": "Elastrix", "description": "Telephony platform artifact. Powers unified communications and VoIP infrastructure." },
+      "wireshark": { "name": "Wireshark", "description": "Network packet analyzer. Captures and deciphers raw traffic across the wire." },
+      "active-directory": { "name": "Active Directory", "description": "Domain authority. Manages identities, permissions, and access across the enterprise realm." }
     },
     "achievements": {
       "web-chat": { "title": "Web-Chat Software", "description": "Built a real-time web-chat application with WebSocket integration, user authentication, and message persistence. Handled concurrent connections and scaling challenges." },

@@ -27,7 +27,8 @@ export const talentNodes: TalentNode[] = [
   { id: "vuejs", name: "Vue.js", description: "The progressive framework. Reactive data binding and component composition for elegant interfaces.", icon: "Hexagon", tree: "frontend", x: 1, y: 3, learned: true, prerequisites: ["web-frontend"] },
   { id: "yii2", name: "Yii2 Framework", description: "High-performance PHP framework. MVC architecture with built-in security and caching enchantments.", icon: "Box", tree: "frontend", x: 2, y: 2, learned: true, prerequisites: ["php"] },
   { id: "laravel", name: "Laravel", description: "The artisan's PHP framework. Eloquent ORM, Blade templating, and elegant syntax for rapid development.", icon: "Gem", tree: "frontend", x: 3, y: 2, learned: true, prerequisites: ["php"] },
-  { id: "mvc", name: "MVC Pattern", description: "Model-View-Controller architecture. The sacred pattern for organizing code into logical domains.", icon: "Layers", tree: "frontend", x: 2.5, y: 3, learned: true, prerequisites: ["yii2", "laravel"] },
+  { id: "redux", name: "React Redux", description: "Global state management for React. A single store of truth that controls the flow of data across all components.", icon: "GitMerge", tree: "frontend", x: 2, y: 3, learned: true, prerequisites: ["web-frontend"] },
+  { id: "mvc", name: "MVC Pattern", description: "Model-View-Controller architecture. The sacred pattern for organizing code into logical domains.", icon: "Layers", tree: "frontend", x: 3, y: 3, learned: true, prerequisites: ["yii2", "laravel"] },
 
   // ─── Shared ───
   { id: "js", name: "JavaScript", description: "The language of interactivity. Wield the power of dynamic scripting and DOM manipulation.", icon: "Braces", tree: "shared", sharedTrees: ["frontend", "backend"], x: 3.5, y: 0, learned: true, prerequisites: [] },
@@ -74,6 +75,7 @@ export const talentEdges: TalentEdge[] = [
   { from: "js", to: "php" },
   { from: "web-frontend", to: "react-native" },
   { from: "web-frontend", to: "vuejs" },
+  { from: "web-frontend", to: "redux" },
   { from: "php", to: "yii2" },
   { from: "php", to: "laravel" },
   { from: "yii2", to: "mvc" },
