@@ -226,8 +226,8 @@ if (fs.existsSync(DIST_DIR)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`RPG Portfolio Server is running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`RPG Portfolio Server is running on 0.0.0.0:${PORT}`);
   console.log(`CORS enabled for: ${allowedOrigins.join(', ')}`);
   console.log(`Data directory: ${DATA_DIR}`);
 });
