@@ -6,7 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,8 +14,12 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, 'data');
 const LOCALES_DIR = path.join(DATA_DIR, 'locales');
 
+const allowedOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(',').map(o => o.trim())
+  : ['http://localhost:8080', 'http://localhost:5173'];
+
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:5173'],
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(bodyParser.json());
@@ -215,7 +219,7 @@ app.all('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`RPG Portfolio Server is running on http://localhost:${PORT}`);
-  console.log(`CORS enabled for: http://localhost:8080, http://localhost:5173`);
+  console.log(`RPG Portfolio Server is running on port ${PORT}`);
+  console.log(`CORS enabled for: ${allowedOrigins.join(', ')}`);
   console.log(`Data directory: ${DATA_DIR}`);
 });
