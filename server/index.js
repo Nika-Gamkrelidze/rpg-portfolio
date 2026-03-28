@@ -214,9 +214,17 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'RPG Portfolio Server is running' });
 });
 
-app.all('*', (req, res) => {
-  res.status(404).json({ error: 'Endpoint not found', path: req.path });
-});
+const DIST_DIR = path.join(__dirname, '..', 'dist');
+if (fs.existsSync(DIST_DIR)) {
+  app.use(express.static(DIST_DIR));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(DIST_DIR, 'index.html'));
+  });
+} else {
+  app.all('*', (req, res) => {
+    res.status(404).json({ error: 'Endpoint not found', path: req.path });
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`RPG Portfolio Server is running on port ${PORT}`);
